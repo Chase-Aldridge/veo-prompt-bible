@@ -184,6 +184,40 @@
             border-color: var(--gold);
         }
 
+        .video-card.expanded {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw;
+            max-width: 1000px;
+            z-index: 1000;
+            border-color: var(--gold);
+        }
+
+        .video-card.expanded .video-container {
+            padding-bottom: 56.25%;
+        }
+
+        .video-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+        }
+
+        .video-overlay.active {
+            display: block;
+        }
+
+        .video-card video {
+            cursor: pointer;
+        }
+
         .video-container {
             position: relative;
             width: 100%;
@@ -619,12 +653,12 @@
 <section class="video-showcase">
     <div class="container">
         <h2>See What's <span>Actually Possible</span></h2>
-        <p class="section-subtitle">These videos were created using prompts from the Prompt Bible. Copy. Paste. Create.<br><span style="color: var(--gold); font-size: 0.9rem;">Click any video to unmute and hear the AI-generated audio</span></p>
+        <p class="section-subtitle">These videos were created using prompts from the Prompt Bible. Copy. Paste. Create.<br><span style="color: var(--gold); font-size: 0.9rem;">Click any video to expand and hear the AI-generated audio</span></p>
 
         <div class="video-grid">
             <div class="video-card">
                 <div class="video-container">
-                    <video src="https://replicate.delivery/xezq/WApHgRn7KlZsOxTgQ8oEmG32e2B6cSSgR8pdwtbN8o2eYVtVA/tmpz78yzufi.mp4" autoplay loop muted playsinline controls></video>
+                    <video src="https://replicate.delivery/xezq/WApHgRn7KlZsOxTgQ8oEmG32e2B6cSSgR8pdwtbN8o2eYVtVA/tmpz78yzufi.mp4" autoplay loop muted playsinline></video>
                 </div>
                 <div class="video-card-content">
                     <h4>Epic Opening Shot</h4>
@@ -634,7 +668,7 @@
 
             <div class="video-card">
                 <div class="video-container">
-                    <video src="https://replicate.delivery/xezq/d7pqyxH8SG65MpcEBm78el7Ax8LmgzTKemiQKA3BdrpIbVtVA/tmpr3e9_nck.mp4" autoplay loop muted playsinline controls></video>
+                    <video src="https://replicate.delivery/xezq/d7pqyxH8SG65MpcEBm78el7Ax8LmgzTKemiQKA3BdrpIbVtVA/tmpr3e9_nck.mp4" autoplay loop muted playsinline></video>
                 </div>
                 <div class="video-card-content">
                     <h4>Night Car Chase</h4>
@@ -644,7 +678,7 @@
 
             <div class="video-card">
                 <div class="video-container">
-                    <video src="https://replicate.delivery/xezq/DVhzr0dsAnpPHVRKmyLfTOQgdS2F0A4nN70PAsK3HX4duq2KA/tmpob29tojt.mp4" autoplay loop muted playsinline controls></video>
+                    <video src="https://replicate.delivery/xezq/DVhzr0dsAnpPHVRKmyLfTOQgdS2F0A4nN70PAsK3HX4duq2KA/tmpob29tojt.mp4" autoplay loop muted playsinline></video>
                 </div>
                 <div class="video-card-content">
                     <h4>ASMR Honey Pour</h4>
@@ -868,6 +902,64 @@
         <p style="margin-top: 25px; font-size: 0.8rem;">This product is not affiliated with or endorsed by Google.</p>
     </div>
 </footer>
+
+<!-- Video Overlay -->
+<div class="video-overlay" id="videoOverlay"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const videos = document.querySelectorAll('.video-card video');
+    const overlay = document.getElementById('videoOverlay');
+    let expandedCard = null;
+
+    videos.forEach(video => {
+        video.addEventListener('click', function(e) {
+            e.preventDefault();
+            const card = this.closest('.video-card');
+
+            if (card.classList.contains('expanded')) {
+                // Collapse
+                card.classList.remove('expanded');
+                overlay.classList.remove('active');
+                this.muted = true;
+                expandedCard = null;
+            } else {
+                // Collapse any other expanded card first
+                if (expandedCard) {
+                    expandedCard.classList.remove('expanded');
+                    expandedCard.querySelector('video').muted = true;
+                }
+                // Expand this one
+                card.classList.add('expanded');
+                overlay.classList.add('active');
+                this.muted = false;
+                this.volume = 0.5;
+                expandedCard = card;
+            }
+        });
+    });
+
+    // Click overlay to close
+    overlay.addEventListener('click', function() {
+        if (expandedCard) {
+            expandedCard.classList.remove('expanded');
+            expandedCard.querySelector('video').muted = true;
+            expandedCard = null;
+        }
+        this.classList.remove('active');
+    });
+
+    // Escape key to close
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && expandedCard) {
+            expandedCard.classList.remove('expanded');
+            expandedCard.querySelector('video').muted = true;
+            overlay.classList.remove('active');
+            expandedCard = null;
+        }
+    });
+});
+</script>
 
 </body>
 </html>
