@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Veo 3.1 Prompt Bible - 50+ Copy-Paste Prompts for Cinematic AI Videos</title>
+    <title>The VEO 3.1 Prompt Bible - 50+ Copy-Paste Prompts for Cinematic AI Videos</title>
     <meta name="description" content="Stop guessing. Start creating Hollywood-quality videos with Google's most powerful AI tool using the exact prompts that actually work.">
 
     <!-- Facebook Pixel Code -->
@@ -19,10 +19,14 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', 'YOUR_PIXEL_ID');
     fbq('track', 'PageView');
-    fbq('track', 'ViewContent', {content_name: 'Veo Prompt Bible Landing Page'});
+    fbq('track', 'ViewContent', {content_name: 'VEO Prompt Bible Landing Page'});
     </script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
     <!-- End Facebook Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -31,38 +35,64 @@
             box-sizing: border-box;
         }
 
+        :root {
+            --black: #0a0a0a;
+            --charcoal: #1a1a1a;
+            --dark-gray: #2a2a2a;
+            --gray: #888888;
+            --cream: #f5f0e8;
+            --gold: #d4a853;
+            --gold-light: #e8c77b;
+            --gold-dark: #b8923f;
+            --emerald: #10b981;
+            --red-soft: #c9544d;
+            --green-soft: #5a9a6e;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
-            color: #1a1a1a;
-            background: #ffffff;
+            color: var(--cream);
+            background: var(--black);
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         /* Hero Section */
         .hero {
-            padding: 60px 0;
+            padding: 80px 0;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--black) 100%);
+            border-bottom: 1px solid var(--dark-gray);
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.2;
+            line-height: 1.1;
+            color: var(--cream);
+        }
+
+        .hero h1 span {
+            color: var(--gold);
         }
 
         .hero .subtitle {
-            font-size: 1.25rem;
-            opacity: 0.95;
-            margin-bottom: 30px;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 40px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -70,43 +100,164 @@
 
         .cta-button {
             display: inline-block;
-            background: #10b981;
-            color: white;
-            padding: 18px 40px;
-            font-size: 1.2rem;
+            background: var(--gold);
+            color: var(--black);
+            padding: 18px 48px;
+            font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 4px;
+            transition: all 0.2s;
             border: none;
             cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .cta-button:hover {
+            background: var(--gold-light);
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 10px 30px rgba(212, 168, 83, 0.3);
         }
 
         .trust-text {
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 0.9rem;
-            opacity: 0.8;
+            color: var(--gray);
         }
 
         /* Section Styling */
         section {
-            padding: 60px 0;
+            padding: 80px 0;
         }
 
-        section:nth-child(even) {
-            background: #f8f9fa;
+        section.alt-bg {
+            background: var(--charcoal);
         }
 
         h2 {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
             margin-bottom: 30px;
             text-align: center;
+            color: var(--cream);
+        }
+
+        h2 span {
+            color: var(--gold);
+        }
+
+        /* Video Showcase Section */
+        .video-showcase {
+            background: linear-gradient(180deg, var(--black) 0%, var(--charcoal) 50%, var(--black) 100%);
+            padding: 100px 0;
+        }
+
+        .video-showcase h2 {
+            margin-bottom: 15px;
+        }
+
+        .video-showcase .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: var(--dark-gray);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--gold);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            background: var(--black);
+        }
+
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, var(--black) 100%);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .video-card-content {
+            padding: 16px;
+        }
+
+        .video-card-content h4 {
+            color: var(--cream);
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .video-card-content p {
+            color: var(--gray);
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        .prompt-reveal {
+            background: var(--dark-gray);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 24px;
+            margin-top: 40px;
+        }
+
+        .prompt-reveal h4 {
+            color: var(--gold);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .prompt-reveal code {
+            display: block;
+            background: var(--black);
+            padding: 16px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            color: var(--cream);
+            line-height: 1.6;
+            white-space: pre-wrap;
+            border-left: 3px solid var(--gold);
         }
 
         /* Problem Section */
@@ -117,49 +268,67 @@
         }
 
         .problem-list li {
-            padding: 12px 0;
-            padding-left: 35px;
+            padding: 14px 0;
+            padding-left: 40px;
             position: relative;
             font-size: 1.1rem;
+            color: var(--cream);
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
         }
 
         .problem-list li:before {
-            content: "❌";
+            content: "✕";
             position: absolute;
             left: 0;
+            color: var(--red-soft);
+            font-weight: bold;
         }
 
         .callout {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 20px;
-            margin: 30px 0;
-            font-style: italic;
+            background: var(--dark-gray);
+            border-left: 4px solid var(--gold);
+            padding: 24px;
+            margin: 40px 0;
+            color: var(--cream);
+        }
+
+        .callout strong {
+            color: var(--gold);
         }
 
         /* Features Section */
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            gap: 24px;
+            margin-top: 50px;
         }
 
         .feature-card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            background: var(--dark-gray);
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            transition: border-color 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--gold);
         }
 
         .feature-card h3 {
             font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #667eea;
+            margin-bottom: 12px;
+            color: var(--gold);
         }
 
         .feature-card p {
-            color: #666;
+            color: var(--gray);
+            line-height: 1.6;
         }
 
         /* Transformation */
@@ -167,61 +336,91 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 30px;
-            max-width: 700px;
+            max-width: 750px;
             margin: 0 auto;
         }
 
         .before, .after {
-            padding: 30px;
-            border-radius: 12px;
+            padding: 32px;
+            border-radius: 8px;
         }
 
         .before {
-            background: #fee2e2;
-            border: 2px solid #fca5a5;
+            background: rgba(201, 84, 77, 0.1);
+            border: 1px solid var(--red-soft);
         }
 
         .after {
-            background: #d1fae5;
-            border: 2px solid #6ee7b7;
+            background: rgba(90, 154, 110, 0.1);
+            border: 1px solid var(--green-soft);
         }
 
         .before h4, .after h4 {
-            font-size: 1.1rem;
-            margin-bottom: 15px;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .before h4 {
+            color: var(--red-soft);
+        }
+
+        .after h4 {
+            color: var(--green-soft);
         }
 
         .before ul, .after ul {
             list-style: none;
         }
 
+        .before li, .after li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--cream);
+        }
+
         .before li:before {
-            content: "😫 ";
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--red-soft);
         }
 
         .after li:before {
-            content: "✨ ";
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--green-soft);
         }
 
         /* Pricing Section */
         .pricing-box {
-            background: white;
+            background: var(--charcoal);
             max-width: 500px;
             margin: 0 auto;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            padding: 50px 40px;
+            border-radius: 8px;
             text-align: center;
+            border: 2px solid var(--gold);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .pricing-box h2 {
+            margin-bottom: 10px;
+            font-size: 1.8rem;
         }
 
         .price {
-            font-size: 3.5rem;
+            font-size: 4rem;
             font-weight: 800;
-            color: #10b981;
+            color: var(--gold);
+            margin: 10px 0;
         }
 
         .price-note {
-            color: #666;
+            color: var(--gray);
             margin-bottom: 30px;
         }
 
@@ -232,100 +431,143 @@
         }
 
         .checklist li {
-            padding: 10px 0;
-            padding-left: 30px;
+            padding: 12px 0;
+            padding-left: 32px;
             position: relative;
+            color: var(--cream);
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .checklist li:last-child {
+            border-bottom: none;
         }
 
         .checklist li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #10b981;
+            color: var(--gold);
             font-weight: bold;
         }
 
         .value-comparison {
-            background: #f0fdf4;
-            padding: 15px;
-            border-radius: 8px;
-            margin: 20px 0;
+            background: var(--dark-gray);
+            padding: 16px;
+            border-radius: 4px;
+            margin: 24px 0;
         }
 
         .value-comparison .original {
             text-decoration: line-through;
-            color: #999;
+            color: var(--gray);
         }
 
         /* FAQ Section */
         .faq-item {
-            background: white;
-            padding: 25px;
-            margin-bottom: 15px;
+            background: var(--dark-gray);
+            padding: 28px;
+            margin-bottom: 16px;
             border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            border: 1px solid #333;
         }
 
         .faq-item h4 {
-            color: #667eea;
-            margin-bottom: 10px;
+            color: var(--cream);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: var(--gray);
         }
 
         /* Who This Is For */
         .for-list {
             list-style: none;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
         .for-list li {
-            padding: 12px 0;
-            padding-left: 35px;
+            padding: 14px 0;
+            padding-left: 40px;
             position: relative;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
+            color: var(--cream);
+            border-bottom: 1px solid var(--dark-gray);
+        }
+
+        .for-list li:last-child {
+            border-bottom: none;
         }
 
         .for-list li:before {
-            content: "✅";
+            content: "✓";
             position: absolute;
             left: 0;
+            color: var(--gold);
+            font-weight: bold;
         }
 
         /* Final CTA */
         .final-cta {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(180deg, var(--charcoal) 0%, var(--black) 100%);
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0;
+            border-top: 1px solid var(--dark-gray);
         }
 
         .final-cta h2 {
-            color: white;
+            color: var(--cream);
         }
 
         .final-cta p {
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
             font-size: 1.1rem;
-            opacity: 0.95;
+            color: var(--gray);
+        }
+
+        .final-cta .highlight {
+            color: var(--gold);
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
-            padding: 40px 0;
+            padding: 50px 0;
             text-align: center;
-            color: #666;
+            color: var(--gray);
             font-size: 0.9rem;
+            background: var(--black);
+            border-top: 1px solid var(--dark-gray);
         }
 
         footer a {
-            color: #667eea;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        footer strong {
+            color: var(--cream);
         }
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .video-grid {
+                grid-template-columns: 1fr;
             }
 
             .transformation {
@@ -333,19 +575,27 @@
             }
 
             .hero {
-                padding: 40px 0;
+                padding: 50px 0;
             }
 
             section {
-                padding: 40px 0;
+                padding: 50px 0;
             }
 
             .pricing-box {
-                padding: 30px 20px;
+                padding: 35px 24px;
             }
 
             .price {
-                font-size: 2.5rem;
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -355,19 +605,76 @@
 <!-- HERO SECTION -->
 <section class="hero">
     <div class="container">
-        <h1>The Veo 3.1 Prompt Bible</h1>
-        <p class="subtitle">50+ Copy-Paste Prompts for Cinematic AI Videos (With Audio)</p>
-        <p style="margin-bottom: 30px; opacity: 0.9;">Stop guessing. Start creating Hollywood-quality videos with Google's most powerful AI tool—using the exact prompts that actually work.</p>
-        <a href="#pricing" class="cta-button">Get Instant Access - $27</a>
-        <p class="trust-text">Instant download • Notion + PDF • Lifetime updates</p>
+        <h1>The <span>VEO 3.1</span> Prompt Bible</h1>
+        <p class="subtitle">50+ Copy-Paste Prompts for Cinematic AI Videos</p>
+        <p class="description">Stop guessing. Start creating Hollywood-quality videos with Google's most powerful AI tool—using the exact prompts that actually work.</p>
+        <a href="#pricing" class="cta-button">Get Instant Access — $27</a>
+        <p class="trust-text">Instant download · Notion + PDF · Lifetime updates</p>
+    </div>
+</section>
+
+<!-- VIDEO SHOWCASE SECTION -->
+<section class="video-showcase">
+    <div class="container">
+        <h2>See What's <span>Actually Possible</span></h2>
+        <p class="section-subtitle">These videos were created using prompts from the Prompt Bible. Copy. Paste. Create.</p>
+
+        <div class="video-grid">
+            <div class="video-card">
+                <div class="video-container">
+                    <!-- Replace with actual video embed -->
+                    <div class="video-placeholder">
+                        <span>VIDEO 1<br>Epic Desert Dawn</span>
+                    </div>
+                    <!-- <video src="YOUR_VIDEO_URL.mp4" autoplay loop muted playsinline></video> -->
+                </div>
+                <div class="video-card-content">
+                    <h4>Epic Opening Shot</h4>
+                    <p>Cinematic landscape with orchestral audio</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <!-- Replace with actual video embed -->
+                    <div class="video-placeholder">
+                        <span>VIDEO 2<br>Neon City Chase</span>
+                    </div>
+                    <!-- <video src="YOUR_VIDEO_URL.mp4" autoplay loop muted playsinline></video> -->
+                </div>
+                <div class="video-card-content">
+                    <h4>Night Car Chase</h4>
+                    <p>Rain-slicked streets with engine roar</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <!-- Replace with actual video embed -->
+                    <div class="video-placeholder">
+                        <span>VIDEO 3<br>Satisfying Pour</span>
+                    </div>
+                    <!-- <video src="YOUR_VIDEO_URL.mp4" autoplay loop muted playsinline></video> -->
+                </div>
+                <div class="video-card-content">
+                    <h4>ASMR Honey Pour</h4>
+                    <p>Viral-ready satisfying content</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="prompt-reveal">
+            <h4>The Prompt Behind Video #1</h4>
+            <code>Vast desert landscape at dawn, a lone figure walking toward camera from the horizon, extreme wide shot slowly pushing in, golden hour light casting long shadows, dust particles floating in the air. Sound of wind howling, footsteps on sand, epic orchestral strings building.</code>
+        </div>
     </div>
 </section>
 
 <!-- PROBLEM SECTION -->
-<section>
+<section class="alt-bg">
     <div class="container">
         <h2>Let Me Guess...</h2>
-        <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">You've tried Veo 3.1. You typed in a prompt. And you got... something that looked like a fever dream rendered in a microwave.</p>
+        <p style="text-align: center; margin-bottom: 40px; font-size: 1.1rem; color: var(--gray);">You've tried VEO 3.1. You typed in a prompt. And you got... something that looked like a fever dream rendered in a microwave.</p>
 
         <ul class="problem-list">
             <li>Your videos look obviously AI-generated (and not in a good way)</li>
@@ -378,7 +685,7 @@
         </ul>
 
         <div class="callout">
-            <strong>It's not your fault.</strong> Veo 3.1 is the most powerful AI video tool ever released. But without the right prompts, it's like having a Ferrari with no steering wheel.
+            <strong>It's not your fault.</strong> VEO 3.1 is the most powerful AI video tool ever released. But without the right prompts, it's like having a Ferrari with no steering wheel.
         </div>
     </div>
 </section>
@@ -386,50 +693,50 @@
 <!-- SOLUTION SECTION -->
 <section>
     <div class="container">
-        <h2>What If You Could Just Copy, Paste, and Create?</h2>
-        <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; font-size: 1.1rem;">
-            Introducing <strong>The Veo 3.1 Prompt Bible</strong>—your complete system for creating stunning AI videos in minutes instead of hours.
+        <h2>What If You Could Just <span>Copy, Paste, and Create?</span></h2>
+        <p style="text-align: center; max-width: 650px; margin: 0 auto 20px; font-size: 1.15rem; color: var(--cream);">
+            Introducing <strong>The VEO 3.1 Prompt Bible</strong>—your complete system for creating stunning AI videos in minutes instead of hours.
         </p>
-        <p style="text-align: center; color: #666;">
+        <p style="text-align: center; color: var(--gray); font-size: 1.05rem;">
             No guessing. No fumbling. No more "close but not quite."<br>
-            Just <strong>battle-tested prompts</strong> that work. Every. Single. Time.
+            Just <span style="color: var(--gold);">battle-tested prompts</span> that work. Every. Single. Time.
         </p>
     </div>
 </section>
 
 <!-- FEATURES SECTION -->
-<section>
+<section class="alt-bg">
     <div class="container">
-        <h2>Here's Exactly What You're Getting</h2>
+        <h2>Here's <span>Exactly</span> What You're Getting</h2>
 
         <div class="feature-grid">
             <div class="feature-card">
-                <h3>🎯 The VCAM Formula</h3>
+                <h3>The VCAM Formula</h3>
                 <p>The simple 4-part system for writing prompts that produce cinematic results. Once you learn this, you'll never write a bad prompt again.</p>
             </div>
 
             <div class="feature-card">
-                <h3>📋 50+ Copy-Paste Prompts</h3>
+                <h3>50+ Copy-Paste Prompts</h3>
                 <p>Organized by category: Cinematic, Social Media, Product, Nature, and Lifestyle. Each one tested and proven to deliver stunning results.</p>
             </div>
 
             <div class="feature-card">
-                <h3>🔊 Audio Prompting Secrets</h3>
-                <p>Veo 3.1's superpower is native audio—but 99% of users are doing it wrong. Learn dialogue, sound effects, and ambient audio techniques.</p>
+                <h3>Audio Prompting Secrets</h3>
+                <p>VEO 3.1's superpower is native audio—but 99% of users are doing it wrong. Learn dialogue, sound effects, and ambient audio techniques.</p>
             </div>
 
             <div class="feature-card">
-                <h3>🎬 Camera Movement Cheat Sheet</h3>
-                <p>Pan. Tilt. Dolly. Crane. Orbit. Stop Googling and start using pro cinematography terms that Veo actually understands.</p>
+                <h3>Camera Movement Cheat Sheet</h3>
+                <p>Pan. Tilt. Dolly. Crane. Orbit. Stop Googling and start using pro cinematography terms that VEO actually understands.</p>
             </div>
 
             <div class="feature-card">
-                <h3>🎨 Style & Aesthetic Library</h3>
+                <h3>Style & Aesthetic Library</h3>
                 <p>From "Wes Anderson symmetry" to "cyberpunk neon"—get the exact modifiers to nail any aesthetic instantly.</p>
             </div>
 
             <div class="feature-card">
-                <h3>⚡ Instant Access</h3>
+                <h3>Instant Access</h3>
                 <p>Get both a Notion template (easy organization) and PDF (offline access) immediately after purchase. No waiting.</p>
             </div>
         </div>
@@ -443,7 +750,7 @@
 
         <div class="transformation">
             <div class="before">
-                <h4>BEFORE the Prompt Bible:</h4>
+                <h4>Before the Prompt Bible</h4>
                 <ul>
                     <li>Generic, flat AI videos</li>
                     <li>Hours of trial and error</li>
@@ -453,7 +760,7 @@
             </div>
 
             <div class="after">
-                <h4>AFTER the Prompt Bible:</h4>
+                <h4>After the Prompt Bible</h4>
                 <ul>
                     <li>Cinematic, professional videos</li>
                     <li>Minutes per video</li>
@@ -466,7 +773,7 @@
 </section>
 
 <!-- WHO THIS IS FOR -->
-<section>
+<section class="alt-bg">
     <div class="container">
         <h2>This Is For You If...</h2>
 
@@ -474,7 +781,7 @@
             <li>You're a content creator who wants to level up without hiring a production team</li>
             <li>You're a marketer who needs quick, professional video content</li>
             <li>You're a solopreneur who wants their brand to look premium</li>
-            <li>You've tried Veo 3.1 and gotten... weird results</li>
+            <li>You've tried VEO 3.1 and gotten... weird results</li>
             <li>You learn best by example, not theory</li>
             <li>You value your time and want prompts that work NOW</li>
         </ul>
@@ -485,7 +792,7 @@
 <section id="pricing">
     <div class="container">
         <div class="pricing-box">
-            <h2 style="margin-bottom: 10px;">Get The Complete Prompt Bible</h2>
+            <h2>Get The Complete <span>Prompt Bible</span></h2>
             <div class="price">$27</div>
             <p class="price-note">That's less than a single stock video clip</p>
 
@@ -501,29 +808,29 @@
 
             <div class="value-comparison">
                 <span class="original">Total Value: $197+</span><br>
-                <strong>Your Price Today: Just $27</strong>
+                <strong style="color: var(--gold);">Your Price Today: Just $27</strong>
             </div>
 
             <!-- REPLACE WITH YOUR GHL CHECKOUT LINK -->
             <a href="YOUR_CHECKOUT_URL" class="cta-button" style="width: 100%; display: block;">
-                GET INSTANT ACCESS - $27
+                GET INSTANT ACCESS — $27
             </a>
 
-            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
-                🔒 Secure checkout • Instant delivery
+            <p style="margin-top: 24px; font-size: 0.9rem; color: var(--gray);">
+                Secure checkout · Instant delivery
             </p>
         </div>
     </div>
 </section>
 
 <!-- FAQ SECTION -->
-<section>
+<section class="alt-bg">
     <div class="container">
         <h2>Questions? I've Got Answers.</h2>
 
         <div class="faq-item">
-            <h4>Do I need a paid Veo subscription?</h4>
-            <p>Nope! Veo 3.1 is free through Google AI Studio. These prompts work there perfectly.</p>
+            <h4>Do I need a paid VEO subscription?</h4>
+            <p>Nope! VEO 3.1 is free through Google AI Studio. These prompts work there perfectly.</p>
         </div>
 
         <div class="faq-item">
@@ -533,17 +840,20 @@
 
         <div class="faq-item">
             <h4>Will these prompts work for other AI video tools?</h4>
-            <p>They're optimized for Veo 3.1, but the principles (especially VCAM and audio) apply broadly to tools like Sora, Kling, and Runway.</p>
+            <p>They're optimized for VEO 3.1, but the principles (especially VCAM and audio) apply broadly to tools like Sora, Kling, and Runway.</p>
         </div>
 
         <div class="faq-item">
             <h4>How is this different from free prompts on Reddit/Twitter?</h4>
-            <p>Three ways: 1) These are organized into a system, not random tips. 2) They include audio prompting, which most free resources ignore. 3) They're battle-tested—not "I think this might work."</p>
+            <p>Three ways:<br><br>
+            <strong>1)</strong> These are organized into a system, not random tips.<br><br>
+            <strong>2)</strong> They include audio prompting, which most free resources ignore.<br><br>
+            <strong>3)</strong> They're battle-tested—not "I think this might work."</p>
         </div>
 
         <div class="faq-item">
             <h4>Will this be updated?</h4>
-            <p>Yes! As Veo evolves, so will this guide. You get lifetime updates at no extra cost.</p>
+            <p>Yes! As VEO evolves, so will this guide. You get lifetime updates at no extra cost.</p>
         </div>
     </div>
 </section>
@@ -551,10 +861,10 @@
 <!-- FINAL CTA -->
 <section class="final-cta">
     <div class="container">
-        <h2>Ready to Stop Guessing and Start Creating?</h2>
+        <h2>Ready to Stop Guessing and <span>Start Creating?</span></h2>
         <p>Every day you spend fumbling with prompts is a day your competitors are making content.</p>
-        <p>The Veo 3.1 Prompt Bible is your shortcut.</p>
-        <p><strong>$27. Instant access. Lifetime updates.</strong></p>
+        <p>The VEO 3.1 Prompt Bible is your shortcut.</p>
+        <p class="highlight" style="font-size: 1.2rem; margin: 30px 0;">$27. Instant access. Lifetime updates.</p>
         <a href="#pricing" class="cta-button">GET THE PROMPT BIBLE NOW</a>
     </div>
 </section>
@@ -562,10 +872,10 @@
 <!-- FOOTER -->
 <footer>
     <div class="container">
-        <p><strong>The Veo 3.1 Prompt Bible</strong></p>
+        <p><strong>The VEO 3.1 Prompt Bible</strong></p>
         <p>Created by Chase Aldridge</p>
-        <p style="margin-top: 10px;">Questions? <a href="mailto:chase@chasealdridge.com">chase@chasealdridge.com</a></p>
-        <p style="margin-top: 20px; font-size: 0.8rem; color: #999;">This product is not affiliated with or endorsed by Google.</p>
+        <p style="margin-top: 15px;">Questions? <a href="mailto:chase@chasealdridge.com">chase@chasealdridge.com</a></p>
+        <p style="margin-top: 25px; font-size: 0.8rem;">This product is not affiliated with or endorsed by Google.</p>
     </div>
 </footer>
 
