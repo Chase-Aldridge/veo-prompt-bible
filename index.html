@@ -499,22 +499,62 @@
         /* FAQ Section */
         .faq-item {
             background: var(--dark-gray);
-            padding: 28px;
             margin-bottom: 16px;
             border-radius: 8px;
             border: 1px solid #333;
+            overflow: hidden;
+            transition: border-color 0.3s;
         }
 
-        .faq-item h4 {
+        .faq-item:hover {
+            border-color: var(--gold);
+        }
+
+        .faq-question {
+            padding: 28px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-question h4 {
             color: var(--cream);
-            margin-bottom: 12px;
             font-size: 1.1rem;
+            margin: 0;
+            flex: 1;
+            padding-right: 16px;
         }
 
-        .faq-item p {
+        .faq-icon {
+            color: var(--gold);
+            font-size: 1.5rem;
+            font-weight: 300;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-answer p {
             color: var(--gray);
             font-size: 1.05rem;
             line-height: 1.8;
+            padding: 0 28px 28px;
+            margin: 0;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
         }
 
         /* Who This Is For */
@@ -853,31 +893,56 @@
         <h2>Questions? I've Got Answers.</h2>
 
         <div class="faq-item">
-            <h4>Do I need a paid VEO subscription?</h4>
-            <p>Nope! VEO 3.1 is free through Google AI Studio. These prompts work there perfectly.</p>
+            <div class="faq-question">
+                <h4>Do I need a paid VEO subscription?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Nope! VEO 3.1 is free through Google AI Studio. These prompts work there perfectly.</p>
+            </div>
         </div>
 
         <div class="faq-item">
-            <h4>What format are the prompts in?</h4>
-            <p>You get both a Notion template (for easy organization and copy-paste) and a PDF (for offline access).</p>
+            <div class="faq-question">
+                <h4>What format are the prompts in?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>You get both a Notion template (for easy organization and copy-paste) and a PDF (for offline access).</p>
+            </div>
         </div>
 
         <div class="faq-item">
-            <h4>Will these prompts work for other AI video tools?</h4>
-            <p>They're optimized for VEO 3.1, but the principles (especially VCAM and audio) apply broadly to tools like Sora, Kling, and Runway.</p>
+            <div class="faq-question">
+                <h4>Will these prompts work for other AI video tools?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>They're optimized for VEO 3.1, but the principles (especially VCAM and audio) apply broadly to tools like Sora, Kling, and Runway.</p>
+            </div>
         </div>
 
         <div class="faq-item">
-            <h4>How is this different from free prompts on Reddit/Twitter?</h4>
-            <p>Three ways:<br>
-            <strong>1)</strong> These are organized into a system, not random tips.<br>
-            <strong>2)</strong> They include audio prompting, which most free resources ignore.<br>
-            <strong>3)</strong> They're battle-tested—not "I think this might work."</p>
+            <div class="faq-question">
+                <h4>How is this different from free prompts on Reddit/Twitter?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Three ways:<br>
+                <strong>1)</strong> These are organized into a system, not random tips.<br>
+                <strong>2)</strong> They include audio prompting, which most free resources ignore.<br>
+                <strong>3)</strong> They're battle-tested—not "I think this might work."</p>
+            </div>
         </div>
 
         <div class="faq-item">
-            <h4>Will this be updated?</h4>
-            <p>Yes! As VEO evolves, so will this guide. You get lifetime updates at no extra cost.</p>
+            <div class="faq-question">
+                <h4>Will this be updated?</h4>
+                <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+                <p>Yes! As VEO evolves, so will this guide. You get lifetime updates at no extra cost.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -957,6 +1022,25 @@ document.addEventListener('DOMContentLoaded', function() {
             overlay.classList.remove('active');
             expandedCard = null;
         }
+    });
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.closest('.faq-item');
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
     });
 });
 </script>
