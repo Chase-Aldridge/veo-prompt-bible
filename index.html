@@ -294,6 +294,46 @@
             border-left: 3px solid var(--gold);
         }
 
+        /* Video Set Navigation */
+        .video-set-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .set-btn {
+            background: var(--dark-gray);
+            color: var(--gray);
+            border: 1px solid #444;
+            padding: 12px 28px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+
+        .set-btn:hover {
+            border-color: var(--gold);
+            color: var(--cream);
+        }
+
+        .set-btn.active {
+            background: var(--gold);
+            color: var(--black);
+            border-color: var(--gold);
+        }
+
+        .video-set {
+            display: none;
+        }
+
+        .video-set.active {
+            display: grid;
+        }
+
         /* Problem Section */
         .problem-list {
             list-style: none;
@@ -655,7 +695,15 @@
         <h2>See What's <span>Actually Possible</span></h2>
         <p class="section-subtitle">These videos were created using prompts from the Prompt Bible. Copy. Paste. Create.<br><span style="color: var(--gold); font-size: 0.9rem;">Click any video to expand and hear the AI-generated audio</span></p>
 
-        <div class="video-grid">
+        <!-- Video Set Navigation -->
+        <div class="video-set-nav">
+            <button class="set-btn active" data-set="1">Cinematic</button>
+            <button class="set-btn" data-set="2">Macro</button>
+            <button class="set-btn" data-set="3">Slow Motion</button>
+        </div>
+
+        <!-- Set 1: Cinematic -->
+        <div class="video-grid video-set active" data-set="1">
             <div class="video-card">
                 <div class="video-container">
                     <video src="https://replicate.delivery/xezq/WApHgRn7KlZsOxTgQ8oEmG32e2B6cSSgR8pdwtbN8o2eYVtVA/tmpz78yzufi.mp4" autoplay loop muted playsinline></video>
@@ -678,7 +726,7 @@
 
             <div class="video-card">
                 <div class="video-container">
-                    <video src="https://replicate.delivery/xezq/DVhzr0dsAnpPHVRKmyLfTOQgdS2F0A4nN70PAsK3HX4duq2KA/tmpob29tojt.mp4" autoplay loop muted playsinline></video>
+                    <video src="https://replicate.delivery/xezq/FxO6fuk1f9nqXUgjVr5Cfwish50qrnELvz0ptXTTveMqevqtC/tmpsqlbh485.mp4" autoplay loop muted playsinline></video>
                 </div>
                 <div class="video-card-content">
                     <h4>ASMR Honey Pour</h4>
@@ -687,9 +735,75 @@
             </div>
         </div>
 
+        <!-- Set 2: Macro -->
+        <div class="video-grid video-set" data-set="2">
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/zFzzzx9bHv6gINAk65AOERJmm4Oh4ex1JAwOItBKeTiP6VtVA/tmpgbvid25c.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Water Droplet Impact</h4>
+                    <p>Extreme macro water physics</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/XAgec3e8eCH7bouU8l7IH8IAN2S2DsM952dxAcdqwsU43rarA/tmpf30_7f3d.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Coffee Pour</h4>
+                    <p>ASMR steam and crema</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/zkxlhVwp62I4E1DQWSQyPf0fQomx72ViKwHeC4vqzPsp7rarA/tmpcxtd386r.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Human Eye Macro</h4>
+                    <p>Detailed iris close-up</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Set 3: Slow Motion -->
+        <div class="video-grid video-set" data-set="3">
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/3q2UzyoKpHJHLhZuIzUeHW6WSr5aTgA8dQnez9gIR14fCsarA/tmpsrwn_3zt.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Glass Shatter</h4>
+                    <p>2000fps crystal explosion</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/Ofao1MTwoazDX606nb61RTY5dOoGhCJPR8KjyRU0HWarBr2KA/tmp_wkxg38b.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Paint Splash</h4>
+                    <p>Colorful slow-mo impact</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-container">
+                    <video src="https://replicate.delivery/xezq/JXQvk5LVjlbvIN5mTsXwZc1aAbhNtWa1t2w5lQ2fnNSIDr2KA/tmpugr2atq3.mp4" autoplay loop muted playsinline></video>
+                </div>
+                <div class="video-card-content">
+                    <h4>Raindrop Ripples</h4>
+                    <p>Perfect concentric waves</p>
+                </div>
+            </div>
+        </div>
+
         <div class="prompt-reveal">
-            <h4>The Prompt Behind Video #1</h4>
-            <code>Vast desert landscape at dawn, a lone figure walking toward camera from the horizon, extreme wide shot slowly pushing in, golden hour light casting long shadows, dust particles floating in the air. Sound of wind howling, footsteps on sand, epic orchestral strings building.</code>
+            <h4 id="promptTitle">The Prompt Behind Video #1</h4>
+            <code id="promptCode">Vast desert landscape at dawn, a lone figure walking toward camera from the horizon, extreme wide shot slowly pushing in, golden hour light casting long shadows, dust particles floating in the air. Sound of wind howling, footsteps on sand, epic orchestral strings building.</code>
         </div>
     </div>
 </section>
@@ -910,8 +1024,62 @@
 document.addEventListener('DOMContentLoaded', function() {
     const videos = document.querySelectorAll('.video-card video');
     const overlay = document.getElementById('videoOverlay');
+    const setButtons = document.querySelectorAll('.set-btn');
+    const videoSets = document.querySelectorAll('.video-set');
+    const promptTitle = document.getElementById('promptTitle');
+    const promptCode = document.getElementById('promptCode');
     let expandedCard = null;
 
+    // Prompts for each video set
+    const prompts = {
+        1: {
+            title: "The Prompt Behind Video #1 — Cinematic",
+            code: "Vast desert landscape at dawn, a lone figure walking toward camera from the horizon, extreme wide shot slowly pushing in, golden hour light casting long shadows, dust particles floating in the air. Sound of wind howling, footsteps on sand, epic orchestral strings building."
+        },
+        2: {
+            title: "The Prompt Behind Video #1 — Macro",
+            code: "Extreme macro shot of a single water droplet falling in slow motion onto a perfectly still water surface, creating concentric ripples that expand outward, studio lighting with dark background, hyper-detailed 8K quality. Subtle plop sound of droplet impact, quiet ambient room tone."
+        },
+        3: {
+            title: "The Prompt Behind Video #1 — Slow Motion",
+            code: "Ultra slow motion 2000fps footage of a crystal wine glass shattering into thousands of pieces against black background, dramatic studio lighting catching every shard and fragment, time frozen moment of destruction, particles suspended in air. Sharp crack of glass breaking, fragments tinkling."
+        }
+    };
+
+    // Video set navigation
+    setButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const setNum = this.dataset.set;
+
+            // Update button states
+            setButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            // Update video set visibility
+            videoSets.forEach(set => {
+                set.classList.remove('active');
+                // Pause all videos when hiding
+                set.querySelectorAll('video').forEach(v => {
+                    v.muted = true;
+                });
+            });
+            document.querySelector(`.video-set[data-set="${setNum}"]`).classList.add('active');
+
+            // Update prompt reveal
+            promptTitle.textContent = prompts[setNum].title;
+            promptCode.textContent = prompts[setNum].code;
+
+            // Close any expanded video
+            if (expandedCard) {
+                expandedCard.classList.remove('expanded');
+                expandedCard.querySelector('video').muted = true;
+                overlay.classList.remove('active');
+                expandedCard = null;
+            }
+        });
+    });
+
+    // Video click to expand
     videos.forEach(video => {
         video.addEventListener('click', function(e) {
             e.preventDefault();
