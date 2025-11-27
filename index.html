@@ -678,11 +678,11 @@
 
             <div class="video-card">
                 <div class="video-container">
-                    <video src="https://res.cloudinary.com/dnflu4ixl/video/upload/v1764260697/veo-prompt-bible/glass-shatter.mp4" autoplay loop muted playsinline></video>
+                    <video src="https://res.cloudinary.com/dnflu4ixl/video/upload/v1764260717/veo-prompt-bible/raindrop-ripples.mp4" autoplay loop muted playsinline data-volume="0.25"></video>
                 </div>
                 <div class="video-card-content">
-                    <h4>Glass Shatter</h4>
-                    <p>Dramatic slow-motion impact</p>
+                    <h4>Raindrop Ripples</h4>
+                    <p>Peaceful water close-up</p>
                 </div>
             </div>
         </div>
@@ -933,7 +933,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.add('expanded');
                 overlay.classList.add('active');
                 this.muted = false;
-                this.volume = 0.5;
+                this.volume = parseFloat(this.dataset.volume) || 0.5;
                 expandedCard = card;
             }
         });
