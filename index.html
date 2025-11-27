@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Veo 3.1 Prompt Bible - 50+ Copy-Paste Prompts for Cinematic AI Videos</title>
+    <meta name="description" content="Stop guessing. Start creating Hollywood-quality videos with Google's most powerful AI tool using the exact prompts that actually work.">
+
+    <!-- Facebook Pixel Code -->
+    <!-- REPLACE YOUR_PIXEL_ID with your actual pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_name: 'Veo Prompt Bible Landing Page'});
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .trust-text {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 0;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Problem Section */
+        .problem-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .problem-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .problem-list li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+
+        .callout {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        /* Features Section */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .feature-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .feature-card p {
+            color: #666;
+        }
+
+        /* Transformation */
+        .transformation {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .before, .after {
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .before {
+            background: #fee2e2;
+            border: 2px solid #fca5a5;
+        }
+
+        .after {
+            background: #d1fae5;
+            border: 2px solid #6ee7b7;
+        }
+
+        .before h4, .after h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .before ul, .after ul {
+            list-style: none;
+        }
+
+        .before li:before {
+            content: "😫 ";
+        }
+
+        .after li:before {
+            content: "✨ ";
+        }
+
+        /* Pricing Section */
+        .pricing-box {
+            background: white;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        .price {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #10b981;
+        }
+
+        .price-note {
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .checklist {
+            text-align: left;
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+
+        .value-comparison {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .value-comparison .original {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-item h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        /* Who This Is For */
+        .for-list {
+            list-style: none;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .for-list li {
+            padding: 12px 0;
+            padding-left: 35px;
+            position: relative;
+            font-size: 1.1rem;
+        }
+
+        .for-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .final-cta h2 {
+            color: white;
+        }
+
+        .final-cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #667eea;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .transformation {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .pricing-box {
+                padding: 30px 20px;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container">
+        <h1>The Veo 3.1 Prompt Bible</h1>
+        <p class="subtitle">50+ Copy-Paste Prompts for Cinematic AI Videos (With Audio)</p>
+        <p style="margin-bottom: 30px; opacity: 0.9;">Stop guessing. Start creating Hollywood-quality videos with Google's most powerful AI tool—using the exact prompts that actually work.</p>
+        <a href="#pricing" class="cta-button">Get Instant Access - $27</a>
+        <p class="trust-text">Instant download • Notion + PDF • Lifetime updates</p>
+    </div>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section>
+    <div class="container">
+        <h2>Let Me Guess...</h2>
+        <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">You've tried Veo 3.1. You typed in a prompt. And you got... something that looked like a fever dream rendered in a microwave.</p>
+
+        <ul class="problem-list">
+            <li>Your videos look obviously AI-generated (and not in a good way)</li>
+            <li>The audio is completely wrong or missing entirely</li>
+            <li>You're spending more time prompting than actually creating</li>
+            <li>Every video feels like a random dice roll</li>
+            <li>You've watched 47 YouTube tutorials and you're more confused than ever</li>
+        </ul>
+
+        <div class="callout">
+            <strong>It's not your fault.</strong> Veo 3.1 is the most powerful AI video tool ever released. But without the right prompts, it's like having a Ferrari with no steering wheel.
+        </div>
+    </div>
+</section>
+
+<!-- SOLUTION SECTION -->
+<section>
+    <div class="container">
+        <h2>What If You Could Just Copy, Paste, and Create?</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 20px; font-size: 1.1rem;">
+            Introducing <strong>The Veo 3.1 Prompt Bible</strong>—your complete system for creating stunning AI videos in minutes instead of hours.
+        </p>
+        <p style="text-align: center; color: #666;">
+            No guessing. No fumbling. No more "close but not quite."<br>
+            Just <strong>battle-tested prompts</strong> that work. Every. Single. Time.
+        </p>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section>
+    <div class="container">
+        <h2>Here's Exactly What You're Getting</h2>
+
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🎯 The VCAM Formula</h3>
+                <p>The simple 4-part system for writing prompts that produce cinematic results. Once you learn this, you'll never write a bad prompt again.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>📋 50+ Copy-Paste Prompts</h3>
+                <p>Organized by category: Cinematic, Social Media, Product, Nature, and Lifestyle. Each one tested and proven to deliver stunning results.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🔊 Audio Prompting Secrets</h3>
+                <p>Veo 3.1's superpower is native audio—but 99% of users are doing it wrong. Learn dialogue, sound effects, and ambient audio techniques.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎬 Camera Movement Cheat Sheet</h3>
+                <p>Pan. Tilt. Dolly. Crane. Orbit. Stop Googling and start using pro cinematography terms that Veo actually understands.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🎨 Style & Aesthetic Library</h3>
+                <p>From "Wes Anderson symmetry" to "cyberpunk neon"—get the exact modifiers to nail any aesthetic instantly.</p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚡ Instant Access</h3>
+                <p>Get both a Notion template (easy organization) and PDF (offline access) immediately after purchase. No waiting.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TRANSFORMATION SECTION -->
+<section>
+    <div class="container">
+        <h2>The Transformation</h2>
+
+        <div class="transformation">
+            <div class="before">
+                <h4>BEFORE the Prompt Bible:</h4>
+                <ul>
+                    <li>Generic, flat AI videos</li>
+                    <li>Hours of trial and error</li>
+                    <li>"Good enough" content</li>
+                    <li>Frustrated and stuck</li>
+                </ul>
+            </div>
+
+            <div class="after">
+                <h4>AFTER the Prompt Bible:</h4>
+                <ul>
+                    <li>Cinematic, professional videos</li>
+                    <li>Minutes per video</li>
+                    <li>Content that stops the scroll</li>
+                    <li>Creating with confidence</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHO THIS IS FOR -->
+<section>
+    <div class="container">
+        <h2>This Is For You If...</h2>
+
+        <ul class="for-list">
+            <li>You're a content creator who wants to level up without hiring a production team</li>
+            <li>You're a marketer who needs quick, professional video content</li>
+            <li>You're a solopreneur who wants their brand to look premium</li>
+            <li>You've tried Veo 3.1 and gotten... weird results</li>
+            <li>You learn best by example, not theory</li>
+            <li>You value your time and want prompts that work NOW</li>
+        </ul>
+    </div>
+</section>
+
+<!-- PRICING SECTION -->
+<section id="pricing">
+    <div class="container">
+        <div class="pricing-box">
+            <h2 style="margin-bottom: 10px;">Get The Complete Prompt Bible</h2>
+            <div class="price">$27</div>
+            <p class="price-note">That's less than a single stock video clip</p>
+
+            <ul class="checklist">
+                <li>The VCAM Formula Framework</li>
+                <li>50+ Copy-Paste Prompts (5 categories)</li>
+                <li>Audio Prompting Secrets Guide</li>
+                <li>Camera Movement Cheat Sheet</li>
+                <li>Style & Aesthetic Library</li>
+                <li>Instant Access (Notion + PDF)</li>
+                <li>Lifetime Updates</li>
+            </ul>
+
+            <div class="value-comparison">
+                <span class="original">Total Value: $197+</span><br>
+                <strong>Your Price Today: Just $27</strong>
+            </div>
+
+            <!-- REPLACE WITH YOUR GHL CHECKOUT LINK -->
+            <a href="YOUR_CHECKOUT_URL" class="cta-button" style="width: 100%; display: block;">
+                GET INSTANT ACCESS - $27
+            </a>
+
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                🔒 Secure checkout • Instant delivery
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section>
+    <div class="container">
+        <h2>Questions? I've Got Answers.</h2>
+
+        <div class="faq-item">
+            <h4>Do I need a paid Veo subscription?</h4>
+            <p>Nope! Veo 3.1 is free through Google AI Studio. These prompts work there perfectly.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>What format are the prompts in?</h4>
+            <p>You get both a Notion template (for easy organization and copy-paste) and a PDF (for offline access).</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Will these prompts work for other AI video tools?</h4>
+            <p>They're optimized for Veo 3.1, but the principles (especially VCAM and audio) apply broadly to tools like Sora, Kling, and Runway.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How is this different from free prompts on Reddit/Twitter?</h4>
+            <p>Three ways: 1) These are organized into a system, not random tips. 2) They include audio prompting, which most free resources ignore. 3) They're battle-tested—not "I think this might work."</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Will this be updated?</h4>
+            <p>Yes! As Veo evolves, so will this guide. You get lifetime updates at no extra cost.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Ready to Stop Guessing and Start Creating?</h2>
+        <p>Every day you spend fumbling with prompts is a day your competitors are making content.</p>
+        <p>The Veo 3.1 Prompt Bible is your shortcut.</p>
+        <p><strong>$27. Instant access. Lifetime updates.</strong></p>
+        <a href="#pricing" class="cta-button">GET THE PROMPT BIBLE NOW</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p><strong>The Veo 3.1 Prompt Bible</strong></p>
+        <p>Created by Chase Aldridge</p>
+        <p style="margin-top: 10px;">Questions? <a href="mailto:chase@chasealdridge.com">chase@chasealdridge.com</a></p>
+        <p style="margin-top: 20px; font-size: 0.8rem; color: #999;">This product is not affiliated with or endorsed by Google.</p>
+    </div>
+</footer>
+
+</body>
+</html>
